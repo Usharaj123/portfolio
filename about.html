@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles-a.css" />
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="logo.png" class="logo" />
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="about-div">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="pic1.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Hello! I'm Rajasekhar , a passionate student on a journey of
+              discovery and growth. Currently pursuing B Tech at AITS . My
+              academic journey has been shaped by a curiosity to explore IT ,
+              and I'm dedicated to mould my knowledge into impactful solutions.
+              Beyond the books, I'm an advocate for morals , and I believe in
+              the transformative power of education. Let's connect and share our
+              experiences—I'm always excited about new opportunities to learn
+              and collaborate.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('Education')">Education</p>
+              <p class="tab-links" onclick="opentab('References')">
+                References
+              </p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Programming Languages</span><br />java , python , c/c++
+                </li>
+                <li>
+                  <span>Web Development</span><br />html , css , javascript
+                </li>
+                <li>
+                  <span>App Development</span><br />Android Apps Using java
+                  ,kotlin
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="Education">
+              <ul>
+                <li>
+                  <span>10th</span><br />Jawahar Navodaya Vidyalaya , kadapa
+                </li>
+                <li>
+                  <span>12th</span><br />Jawahar Navodaya Vidyalaya , kadapa
+                </li>
+                <li>
+                  <span>B Tech</span><br />Annamacharya Institute of technlogy &
+                  sciences
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="References">
+              <ul>
+                <li>
+                  <span>Git</span><br /><a
+                    href="https://github.com/Raja-02"
+                    style="text-decoration: none; color: #fff"
+                    >Raja-02</a
+                  >
+                </li>
+                <li>
+                  <span>Linkedin</span><br /><a
+                    href="https://www.linkedin.com/in/narasapuram-rajasekhar-730469228/"
+                    style="text-decoration: none; color: #fff"
+                    >Narasapuram Rajasekhar</a
+                  >
+                </li>
+                <li>
+                  <span>Online Platforms</span><br />
+                  <a
+                    href="https://leetcode.com/rajasekharnarasapuram02/"
+                    style="text-decoration: none; color: #fff"
+                    >LeetCode</a
+                  >
+                  ,
+                  <a
+                    href="https://www.hackerrank.com/profile/Rajasekhar_02"
+                    style="text-decoration: none; color: #fff"
+                    >HackerRank</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
